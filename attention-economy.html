@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--
+    ✏️ EDIT: Change the <title> to your essay title
+  -->
+  <title>The Attention Economy and Its Discontents — Kyra Jolly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <style>
+    .essay-hero {
+      background: var(--navy);
+      padding: 10rem 0 6rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .essay-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 65% 40%, rgba(26,86,219,0.2), transparent 60%),
+                  radial-gradient(ellipse at 25% 75%, rgba(124,58,237,0.1), transparent 55%);
+    }
+    .essay-hero__inner {
+      position: relative; z-index: 1;
+      max-width: 760px;
+    }
+    .essay-hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 5.5vw, 5rem);
+      font-weight: 400;
+      color: white;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+    .essay-hero__meta {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .essay-hero__date {
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+    }
+    .essay-hero__tag {
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--blue-light);
+      background: rgba(59,130,246,0.15);
+      padding: 0.3rem 0.75rem; border-radius: 100px;
+    }
+    .essay-hero__lede {
+      color: rgba(255,255,255,0.6);
+      font-size: 1.15rem;
+      line-height: 1.75;
+      max-width: 620px;
+      margin-top: 1.75rem;
+      font-family: var(--font-display);
+      font-style: italic;
+    }
+
+    /* Essay body */
+    .essay-body { max-width: 720px; margin: 0 auto; }
+    .essay-body p {
+      font-size: 1.05rem; line-height: 1.9;
+      color: #3A3F52; margin-bottom: 1.6rem;
+    }
+    .essay-body h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-weight: 400; margin: 3rem 0 1rem; color: var(--navy);
+    }
+    .essay-body h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      font-weight: 400; margin: 2rem 0 0.75rem; color: var(--navy);
+    }
+    .essay-body blockquote {
+      border-left: 3px solid var(--blue);
+      padding: 0.75rem 1.75rem; margin: 2.5rem 0;
+      background: rgba(26,86,219,0.04);
+      border-radius: 0 8px 8px 0;
+    }
+    .essay-body blockquote p {
+      font-family: var(--font-display);
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      font-style: italic; color: var(--navy); margin: 0;
+    }
+    /* Reading time estimate */
+    .reading-time {
+      font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 0.08em; color: rgba(255,255,255,0.35);
+    }
+
+    .back-link {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.8rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--blue-light); margin-bottom: 2.5rem;
+      transition: gap 0.2s ease;
+    }
+    .back-link:hover { gap: 0.75rem; }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ NAV ════════════════════════════════════════════════ -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="../../index.html" class="nav__logo">Kyra <span>Jolly</span></a>
+        <ul class="nav__links">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../about.html">About</a></li>
+          <li><a href="../../films.html">Films</a></li>
+          <li><a href="../../finance.html">Finance</a></li>
+          <li><a href="../../book-reviews.html">Books</a></li>
+          <li><a href="../../film-reviews.html">Film Reviews</a></li>
+        </ul>
+        <button class="nav__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav__mobile">
+    <a href="../../index.html">Home</a>
+    <a href="../../about.html">About</a>
+    <a href="../../films.html">Films</a>
+    <a href="../../finance.html">Finance</a>
+    <a href="../../book-reviews.html">Books</a>
+    <a href="../../film-reviews.html">Film Reviews</a>
+  </div>
+
+  <!-- ═══ HERO ════════════════════════════════════════════════ -->
+  <section class="essay-hero">
+    <div class="container">
+      <a href="../../finance.html" class="back-link">← All essays</a>
+      <div class="essay-hero__inner">
+
+        <div class="essay-hero__meta" style="margin-bottom:1.5rem;">
+          <!--
+            ✏️ EDIT: Topic tag e.g. Macro, Markets, Inequality, Tech & Economy, Economic History
+          -->
+          <span class="essay-hero__tag">Tech &amp; Economy</span>
+
+          <!--
+            ✏️ EDIT: Month and year this essay was published
+          -->
+          <span class="essay-hero__date">February 2025</span>
+
+          <!--
+            ✏️ EDIT: Approximate reading time
+          -->
+          <span class="reading-time">8 min read</span>
+        </div>
+
+        <!--
+          ✏️ EDIT: Essay title
+        -->
+        <h1 class="essay-hero__title">The Attention Economy and Its Discontents</h1>
+
+        <!--
+          ✏️ EDIT: A one or two sentence intro/lede that summarises the essay's argument
+        -->
+        <p class="essay-hero__lede">
+          We've spent two decades building platforms that monetise human attention. This essay asks whether the structural logic of that economy can ever be reformed from within.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ESSAY BODY ═══════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="essay-body">
+
+        <!--
+          ✏️ EDIT: Write your full essay below.
+
+          Use <p> for paragraphs.
+          Use <h2> for major section headings.
+          Use <h3> for sub-headings.
+          Use <blockquote><p>...</p></blockquote> for pull quotes or citations.
+
+          Delete the example content and replace with your own.
+        -->
+
+        <p>
+          In 2004, a Harvard sophomore built a website that let students rate the attractiveness of their classmates. Within hours it had crashed the university's network. Twenty years later, the company that grew from that experiment is worth over a trillion dollars and has reshaped — in ways we are still struggling to articulate — the texture of daily life for billions of people.
+        </p>
+
+        <p>
+          The story of social media is, at one level, a story about attention. Not attention as the cognitive scientists mean it — the directed focus required for complex tasks — but attention as an economic resource, something that can be harvested, packaged, and sold. The attention economy is the name we give to the set of markets and incentive structures that have developed around this harvesting.
+        </p>
+
+        <h2>The mechanics of capture</h2>
+
+        <p>
+          The basic model is straightforward. Platforms provide services — social connection, information, entertainment — at zero monetary cost to the user. The platform monetises through advertising, which means its business interest lies in maximising the time users spend on the platform. Every product decision, from the infinite scroll to the notification badge, serves this end.
+        </p>
+
+        <p>
+          What makes this arrangement distinctive is not its venality — plenty of industries seek to maximise consumption — but its precision. Digital platforms have access to granular data about user behaviour: what you click, how long you linger, when you return. This data allows them to optimise their products for engagement with a thoroughness that traditional media could never approach.
+        </p>
+
+        <blockquote>
+          <p>The problem is not that the platforms are malicious. The problem is that they are functional — they work exactly as designed.</p>
+        </blockquote>
+
+        <h2>What gets optimised, and what doesn't</h2>
+
+        <p>
+          Here is the structural problem. Engagement — the metric that advertising-funded platforms optimise for — is not the same thing as value. Research consistently finds that content which provokes strong emotional reactions, particularly outrage and anxiety, generates more engagement than content that is accurate, nuanced, or genuinely informative. A platform optimising for engagement will, all else equal, surface more outrage and more anxiety.
+        </p>
+
+        <p>
+          This is not a bug that can be patched. It is a feature of the incentive structure. As long as advertising remains the primary revenue model, the interests of platforms and the interests of users will systematically diverge.
+        </p>
+
+        <h2>Can it be reformed?</h2>
+
+        <p>
+          The reform proposals are broadly of three kinds: regulatory (governments impose constraints on platform behaviour), structural (change the revenue model, e.g. subscriptions or public funding), and technical (design platforms to optimise for user wellbeing rather than engagement). Each has merits; each has significant obstacles.
+        </p>
+
+        <p>
+          Regulatory approaches face the classic problem of jurisdictional arbitrage — platforms operate globally, regulators nationally. Structural reforms require either user willingness to pay or public subsidy at significant scale. Technical reforms founder on the question of how you measure wellbeing, and who decides.
+        </p>
+
+        <p>
+          None of this means reform is impossible. But it does suggest that it will be slow, contested, and incomplete — and that in the meantime, the default will continue to be an economy of attention that serves advertisers rather than the people whose attention is being sold.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <div class="footer__logo">Kyra Jolly</div>
+          <p class="footer__tagline">Film, writing, and economic thought from a creative perspective.</p>
+          <div class="footer__social">
+            <a href="#" class="social-link">𝕏</a>
+            <a href="#" class="social-link">◎</a>
+            <a href="#" class="social-link">◈</a>
+            <a href="#" class="social-link">in</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__nav-title">Navigate</div>
+          <ul class="footer__nav-links">
+            <li><a href="../../about.html">About Me</a></li>
+            <li><a href="../../films.html">My Films</a></li>
+            <li><a href="../../finance.html">Finance</a></li>
+            <li><a href="../../book-reviews.html">Book Reviews</a></li>
+            <li><a href="../../film-reviews.html">Film Reviews</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__nav-title">Connect</div>
+          <ul class="footer__nav-links">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter / X</a></li>
+            <li><a href="#">Letterboxd</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Kyra Jolly. All rights reserved.</span>
+        <span>kyrajolly.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>

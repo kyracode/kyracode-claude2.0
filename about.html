@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Kyra Jolly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══ NAV ════════════════════════════════════════════════ -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">Kyra <span>Jolly</span></a>
+        <ul class="nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="films.html">Films</a></li>
+          <li><a href="finance.html">Finance</a></li>
+          <li><a href="book-reviews.html">Books</a></li>
+          <li><a href="film-reviews.html">Film Reviews</a></li>
+        </ul>
+        <button class="nav__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav__mobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="films.html">Films</a>
+    <a href="finance.html">Finance</a>
+    <a href="book-reviews.html">Books</a>
+    <a href="film-reviews.html">Film Reviews</a>
+  </div>
+
+  <!-- ═══ HERO ════════════════════════════════════════════════ -->
+  <section class="about-hero">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Left: text -->
+        <div class="fade-in">
+          <span class="label" style="color:var(--blue-light);">About Me</span>
+          <h1 class="display-1" style="color:white; margin-top:0.75rem;">
+            <!-- ✏️ EDIT: Your headline -->
+            I make<br/><em style="font-style:italic; font-weight:300;">things.</em>
+          </h1>
+          <p style="color:rgba(255,255,255,0.6); font-size:1.05rem; line-height:1.8; max-width:460px; margin-top:1.5rem;">
+            <!-- ✏️ EDIT: One-line description of who you are -->
+            Filmmaker, writer, and thinker. I explore the world through multiple lenses — from camera to keyboard to spreadsheet.
+          </p>
+          <div style="margin-top:2.5rem;">
+            <!-- ✏️ EDIT: Your email -->
+            <a href="mailto:hello@kyrajolly.com" class="btn btn--white">Get in touch <span class="arrow">→</span></a>
+          </div>
+        </div>
+
+        <!-- Right: photo -->
+        <div class="fade-in fade-in-delay-1">
+          <div class="about-img-main">
+            <!--
+              ✏️ TO ADD YOUR PHOTO:
+              Replace the line below with:
+              <img src="assets/images/profile.jpg" alt="Kyra Jolly">
+              Then delete the span.
+            -->
+            <span>YOUR PHOTO HERE</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ BIO ═════════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:start;">
+
+        <!-- Bio text -->
+        <div class="fade-in">
+          <span class="label">Background</span>
+          <h2 style="font-family:var(--font-display); font-size:clamp(1.6rem,3vw,2.5rem); margin:0.75rem 0 1.5rem;">
+            <!-- ✏️ EDIT: Section heading -->
+            Who I am
+          </h2>
+          <!-- ✏️ EDIT: Replace all paragraph text below with your own bio -->
+          <p style="color:var(--muted); line-height:1.8; margin-bottom:1.25rem;">
+            I'm a <strong style="color:var(--text);">filmmaker and writer</strong> based in [Your Location]. My work spans short film, documentary, fiction writing, and long-form critical essays on film and economics.
+          </p>
+          <p style="color:var(--muted); line-height:1.8; margin-bottom:1.25rem;">
+            I studied [Your Field] at [Your Institution], where I made my first short films and fell in love with the mechanics of storytelling.
+          </p>
+          <p style="color:var(--muted); line-height:1.8; margin-bottom:2rem;">
+            On this site you'll find my film portfolio, writing on finance and economics, and book and film reviews.
+          </p>
+          <!-- ✏️ EDIT: Your email -->
+          <a href="mailto:hello@kyrajolly.com" class="btn btn--primary">Say hello <span class="arrow">→</span></a>
+        </div>
+
+        <!-- Skills -->
+        <div class="fade-in fade-in-delay-1">
+          <span class="label">What I do</span>
+          <div style="margin-top:1.25rem;">
+            <!-- ✏️ EDIT: Add or remove skill cards. Each card has a name and short description. -->
+            <div class="skill-card">
+              <div class="skill-card__name">Film Direction</div>
+              <div class="skill-card__desc">Short film, documentary, and experimental formats</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-card__name">Screenwriting</div>
+              <div class="skill-card__desc">Original scripts and adaptations</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-card__name">Finance Writing</div>
+              <div class="skill-card__desc">Markets, macro, and monetary thought</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-card__name">Critical Essays</div>
+              <div class="skill-card__desc">Long-form cultural and economic analysis</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-card__name">Book & Film Reviews</div>
+              <div class="skill-card__desc">In-depth criticism across literature and cinema</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ GALLERY ══════════════════════════════════════════════ -->
+  <section class="section--sm section--cream">
+    <div class="container">
+      <span class="label fade-in">Gallery</span>
+      <h2 style="font-family:var(--font-display); font-size:clamp(1.6rem,3vw,2.5rem); margin:0.5rem 0 2rem;" class="fade-in">
+        <!-- ✏️ EDIT: Gallery heading -->
+        Behind the work
+      </h2>
+      <!--
+        ✏️ TO ADD PHOTOS: Replace each div with:
+        <div class="gallery-item"><img src="assets/images/gallery-1.jpg" alt=""></div>
+      -->
+      <div class="gallery-grid fade-in">
+        <div class="gallery-item" style="background:linear-gradient(145deg,#1A2D5A,#0D1035);"></div>
+        <div class="gallery-item" style="background:linear-gradient(145deg,#2D1B69,#1A2D5A);"></div>
+        <div class="gallery-item" style="background:linear-gradient(145deg,#0D3050,#1A4580);"></div>
+        <div class="gallery-item" style="background:linear-gradient(145deg,#3D1060,#2D1B69);"></div>
+        <div class="gallery-item" style="background:linear-gradient(145deg,#1A3560,#0D2048);"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <div class="footer__logo">Kyra Jolly</div>
+          <p class="footer__tagline">Film, writing, and economic thought from a creative perspective.</p>
+          <div class="footer__social">
+            <a href="#" class="social-link">𝕏</a>
+            <a href="#" class="social-link">◎</a>
+            <a href="#" class="social-link">◈</a>
+            <a href="#" class="social-link">in</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__nav-title">Navigate</div>
+          <ul class="footer__nav-links">
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="films.html">My Films</a></li>
+            <li><a href="finance.html">Finance</a></li>
+            <li><a href="book-reviews.html">Book Reviews</a></li>
+            <li><a href="film-reviews.html">Film Reviews</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__nav-title">Connect</div>
+          <ul class="footer__nav-links">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter / X</a></li>
+            <li><a href="#">Letterboxd</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Kyra Jolly. All rights reserved.</span>
+        <span>kyrajolly.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

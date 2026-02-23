@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--
+    ✏️ EDIT: Change the <title> to the film name
+  -->
+  <title>All We Imagine as Light — Kyra Jolly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <style>
+    .review-hero {
+      background: var(--navy);
+      padding: 9rem 0 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .review-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 60% 40%, rgba(26,86,219,0.2), transparent 60%),
+                  radial-gradient(ellipse at 20% 70%, rgba(124,58,237,0.12), transparent 55%);
+    }
+    /* Full-width film still — takes up roughly a third of the viewport height */
+    .film-still {
+      position: relative;
+      width: 100%;
+      height: 38vh;
+      min-height: 260px;
+      background: linear-gradient(145deg, #1A2D5A, #2D1B69);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.15);
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      letter-spacing: 0.18em;
+    }
+    .film-still img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .film-still::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, var(--navy) 0%, transparent 60%);
+    }
+
+    /* Hero text overlaid on bottom of still */
+    .review-hero__overlay {
+      position: relative; z-index: 1;
+      padding: 0 0 4rem;
+    }
+    .review-hero__film-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6vw, 5.5rem);
+      font-weight: 400;
+      color: white;
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+    .review-hero__director {
+      font-family: var(--font-display);
+      font-size: clamp(1rem, 1.8vw, 1.35rem);
+      font-weight: 300;
+      color: rgba(255,255,255,0.5);
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+    .review-hero__meta {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .review-hero__date {
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+    }
+    .review-hero__tag {
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--blue-light);
+      background: rgba(59,130,246,0.15);
+      padding: 0.3rem 0.75rem; border-radius: 100px;
+    }
+    .review-hero__stars { color: #F59E0B; font-size: 1rem; letter-spacing: 0.08em; }
+
+    /* Review body */
+    .review-body { max-width: 720px; margin: 0 auto; }
+    .review-body p {
+      font-size: 1.05rem; line-height: 1.85;
+      color: #3A3F52; margin-bottom: 1.5rem;
+    }
+    .review-body h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-weight: 400; margin: 2.5rem 0 1rem; color: var(--navy);
+    }
+    .review-body blockquote {
+      border-left: 3px solid var(--blue);
+      padding: 0.75rem 1.75rem; margin: 2rem 0;
+      background: rgba(26,86,219,0.04);
+      border-radius: 0 8px 8px 0;
+    }
+    .review-body blockquote p {
+      font-family: var(--font-display);
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      font-style: italic; color: var(--navy); margin: 0;
+    }
+
+    .back-link {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.8rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--blue-light); margin-bottom: 2rem;
+      transition: gap 0.2s ease;
+    }
+    .back-link:hover { gap: 0.75rem; }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ NAV ════════════════════════════════════════════════ -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="../../index.html" class="nav__logo">Kyra <span>Jolly</span></a>
+        <ul class="nav__links">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../about.html">About</a></li>
+          <li><a href="../../films.html">Films</a></li>
+          <li><a href="../../finance.html">Finance</a></li>
+          <li><a href="../../book-reviews.html">Books</a></li>
+          <li><a href="../../film-reviews.html">Film Reviews</a></li>
+        </ul>
+        <button class="nav__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav__mobile">
+    <a href="../../index.html">Home</a>
+    <a href="../../about.html">About</a>
+    <a href="../../films.html">Films</a>
+    <a href="../../finance.html">Finance</a>
+    <a href="../../book-reviews.html">Books</a>
+    <a href="../../film-reviews.html">Film Reviews</a>
+  </div>
+
+  <!-- ═══ HERO ════════════════════════════════════════════════ -->
+  <section class="review-hero">
+    <div class="container" style="position:relative; z-index:1; padding-bottom:2rem;">
+      <a href="../../film-reviews.html" class="back-link">← All film reviews</a>
+    </div>
+
+    <!--
+      ✏️ TO ADD A FILM STILL IMAGE:
+      Replace the placeholder text inside .film-still with:
+      <img src="../../assets/images/reviews/all-we-imagine.jpg" alt="All We Imagine as Light still">
+
+      The image will stretch full-width at about 38% of screen height.
+      Place stills in assets/images/reviews/
+    -->
+    <div class="film-still">
+      FILM STILL IMAGE
+    </div>
+
+    <div class="container">
+      <div class="review-hero__overlay">
+        <!--
+          ✏️ EDIT: Film title
+        -->
+        <h1 class="review-hero__film-title">All We Imagine as Light</h1>
+
+        <!--
+          ✏️ EDIT: Director name and year
+        -->
+        <p class="review-hero__director">Dir. Payal Kapadia, 2024</p>
+
+        <div class="review-hero__meta">
+          <!--
+            ✏️ EDIT: Month and year you wrote this review
+          -->
+          <span class="review-hero__date">December 2024</span>
+
+          <!--
+            ✏️ EDIT: Star rating
+          -->
+          <span class="review-hero__stars">★★★★★</span>
+
+          <!--
+            ✏️ EDIT: Genre tag e.g. Contemporary, Arthouse, Classic, Documentary
+          -->
+          <span class="review-hero__tag">Contemporary</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ REVIEW BODY ══════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="review-body">
+
+        <!--
+          ✏️ EDIT: Write your full review below.
+
+          Use <p> for paragraphs.
+          Use <h2> for section headings.
+          Use <blockquote><p>...</p></blockquote> for pull quotes.
+
+          Delete the example content and replace with your own.
+        -->
+
+        <p>
+          Payal Kapadia's Palme d'Or winner moves through Mumbai with a patience that is itself a kind of argument. In an era of accelerated cinema — fast cuts, urgent plotting, relentless incident — she insists on duration, on the way light falls through a hospital window, on the texture of a commute. The film earns every minute of its two hours.
+        </p>
+
+        <p>
+          The story, loosely: two nurses share a flat and a working life. Prabha, the elder, receives a letter from a husband she hasn't seen in years. Anu, younger, is conducting a secret relationship with a Muslim man. A third woman, Parvaty, faces eviction. These are the bones of a social-realist drama, but Kapadia is not a social-realist director.
+        </p>
+
+        <blockquote>
+          <p>To watch the film is to feel that someone has taken seriously the idea that ordinary lives deserve the full apparatus of cinematic attention.</p>
+        </blockquote>
+
+        <h2>Luminous and precise</h2>
+
+        <p>
+          What distinguishes the film is its quality of attention. Kapadia renders her characters' inner lives without ever stating them — through glance, through posture, through the way Prabha stands at the window of a train. The performances are extraordinary in the sense that they do not feel like performances at all.
+        </p>
+
+        <p>
+          The cinematography by Ranabir Das moves between styles — realist during the working scenes, dreamlike and loose during sequences set near the sea — in a way that never feels arbitrary. The film's final act, which I will not describe, earns its images through everything that has preceded them.
+        </p>
+
+        <h2>The verdict</h2>
+
+        <p>
+          One of the finest films in recent memory. Tender, rigorous, and alive to the world in a way that very few films manage. The kind of cinema that makes you want to pay closer attention to your own life when you leave the theatre.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <div class="footer__logo">Kyra Jolly</div>
+          <p class="footer__tagline">Film, writing, and economic thought from a creative perspective.</p>
+          <div class="footer__social">
+            <a href="#" class="social-link">𝕏</a>
+            <a href="#" class="social-link">◎</a>
+            <a href="#" class="social-link">◈</a>
+            <a href="#" class="social-link">in</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__nav-title">Navigate</div>
+          <ul class="footer__nav-links">
+            <li><a href="../../about.html">About Me</a></li>
+            <li><a href="../../films.html">My Films</a></li>
+            <li><a href="../../finance.html">Finance</a></li>
+            <li><a href="../../book-reviews.html">Book Reviews</a></li>
+            <li><a href="../../film-reviews.html">Film Reviews</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__nav-title">Connect</div>
+          <ul class="footer__nav-links">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter / X</a></li>
+            <li><a href="#">Letterboxd</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Kyra Jolly. All rights reserved.</span>
+        <span>kyrajolly.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>

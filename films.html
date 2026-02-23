@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Films — Kyra Jolly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══ NAV ════════════════════════════════════════════════ -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">Kyra <span>Jolly</span></a>
+        <ul class="nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="films.html">Films</a></li>
+          <li><a href="finance.html">Finance</a></li>
+          <li><a href="book-reviews.html">Books</a></li>
+          <li><a href="film-reviews.html">Film Reviews</a></li>
+        </ul>
+        <button class="nav__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav__mobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="films.html">Films</a>
+    <a href="finance.html">Finance</a>
+    <a href="book-reviews.html">Books</a>
+    <a href="film-reviews.html">Film Reviews</a>
+  </div>
+
+  <!-- ═══ TIMELINE HERO ═══════════════════════════════════════ -->
+  <section class="timeline-hero">
+    <div class="timeline-hero__lines"></div>
+    <div class="container" style="position:relative; z-index:1;">
+      <span class="label" style="color:rgba(255,255,255,0.5);">Portfolio</span>
+      <h1 class="display-1 fade-in" style="color:white; margin-top:0.75rem; margin-bottom:1.25rem;">
+        <!-- ✏️ EDIT: Page heading -->
+        My Films
+      </h1>
+      <p class="fade-in fade-in-delay-1" style="color:rgba(255,255,255,0.55); font-size:1.05rem; max-width:480px; margin-bottom:2.5rem; line-height:1.75;">
+        <!-- ✏️ EDIT: Brief description of your film work -->
+        Short films, documentaries, and experimental work. Each film is an attempt to understand something about the world.
+      </p>
+      <div class="year-filter fade-in fade-in-delay-2">
+        <button class="year-btn active" data-year="all">All Years</button>
+        <button class="year-btn" data-year="2026">2026</button>
+        <button class="year-btn" data-year="2025">2025</button>
+        <button class="year-btn" data-year="2024">2024</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FILMS ════════════════════════════════════════════════ -->
+  <section style="padding: 0 0 6rem;">
+    <div class="container">
+
+      <!--
+      ╔══════════════════════════════════════════════════════════════╗
+      ║  FILM ENTRY TEMPLATE                                         ║
+      ║  Copy this entire <article> block to add a new film.        ║
+      ║  - Change data-year="2025" to match the film's year         ║
+      ║  - Add .reverse class on alternating entries for variety    ║
+      ║  - Replace the Watch now href="#" with your actual link      ║
+      ║  - To add an image: add <img src="..."> inside .film-poster  ║
+      ║    and delete the .film-poster__placeholder div              ║
+      ╚══════════════════════════════════════════════════════════════╝
+      -->
+
+      <!-- FILM 01 -->
+      <article class="film-entry fade-in" data-year="2025">
+        <div>
+          <div class="film-entry__number">01</div>
+          <span class="label">Short Film · 2025</span>
+          <h2 class="film-entry__title" style="margin-top:0.5rem;">
+            <!-- ✏️ EDIT: Film title -->
+            The Space Between Frames
+          </h2>
+          <div class="film-entry__meta">
+            <!-- ✏️ EDIT: Director · Year · Duration -->
+            Dir. Kyra Jolly &nbsp;·&nbsp; 2025 &nbsp;·&nbsp; 18 min
+          </div>
+          <p class="film-entry__synopsis">
+            <!-- ✏️ EDIT: Film synopsis -->
+            A meditation on memory and urban space. Shot over four months in London, Tbilisi, and Lisbon, the film follows a woman returning to places she once called home — only to find they no longer recognise her.
+          </p>
+          <!-- ✏️ EDIT: Replace # with your film link (YouTube, Vimeo, etc.) -->
+          <a href="#" class="btn btn--primary">Watch now <span class="arrow">→</span></a>
+        </div>
+        <div>
+          <div class="film-poster">
+            <!--
+              ✏️ TO ADD A FILM STILL/POSTER IMAGE:
+              Delete the .film-poster__placeholder div below,
+              then add: <img src="assets/images/films/film-1.jpg" alt="Film title still">
+            -->
+            <div class="film-poster__placeholder">FILM STILL / POSTER</div>
+            <div class="film-poster__label">2025 · 18 min</div>
+          </div>
+        </div>
+      </article>
+      <!-- END TEMPLATE -->
+
+
+      <!-- FILM 02 — note .reverse class flips image to left -->
+      <article class="film-entry reverse fade-in" data-year="2025">
+        <div>
+          <div class="film-entry__number">02</div>
+          <span class="label">Documentary · 2025</span>
+          <h2 class="film-entry__title" style="margin-top:0.5rem;">Margins of the Market</h2>
+          <div class="film-entry__meta">Dir. Kyra Jolly &nbsp;·&nbsp; 2025 &nbsp;·&nbsp; 32 min</div>
+          <p class="film-entry__synopsis">
+            A documentary portrait of informal economy workers in three European cities — a flower seller in Warsaw, a street musician in Athens, and a vintage dealer in Prague.
+          </p>
+          <a href="#" class="btn btn--primary">Watch now <span class="arrow">→</span></a>
+        </div>
+        <div>
+          <div class="film-poster" style="background:linear-gradient(135deg,#2D1060,#1A0840);">
+            <div class="film-poster__placeholder">FILM STILL / POSTER</div>
+            <div class="film-poster__label">2025 · 32 min</div>
+          </div>
+        </div>
+      </article>
+
+
+      <!-- FILM 03 -->
+      <article class="film-entry fade-in" data-year="2024">
+        <div>
+          <div class="film-entry__number">03</div>
+          <span class="label">Short Film · 2024</span>
+          <h2 class="film-entry__title" style="margin-top:0.5rem;">Tides</h2>
+          <div class="film-entry__meta">Dir. Kyra Jolly &nbsp;·&nbsp; 2024 &nbsp;·&nbsp; 12 min</div>
+          <p class="film-entry__synopsis">
+            Two sisters return to their childhood coastal town after their grandmother's death. Between clearing out the house and old neighbours, old fractures begin to surface.
+          </p>
+          <a href="#" class="btn btn--primary">Watch now <span class="arrow">→</span></a>
+        </div>
+        <div>
+          <div class="film-poster" style="background:linear-gradient(135deg,#0D3050,#1A4580);">
+            <div class="film-poster__placeholder">FILM STILL / POSTER</div>
+            <div class="film-poster__label">2024 · 12 min</div>
+          </div>
+        </div>
+      </article>
+
+
+      <!-- FILM 04 -->
+      <article class="film-entry reverse fade-in" data-year="2024">
+        <div>
+          <div class="film-entry__number">04</div>
+          <span class="label">Experimental · 2024</span>
+          <h2 class="film-entry__title" style="margin-top:0.5rem;">Frequency</h2>
+          <div class="film-entry__meta">Dir. Kyra Jolly &nbsp;·&nbsp; 2024 &nbsp;·&nbsp; 8 min</div>
+          <p class="film-entry__synopsis">
+            An experimental short built from archival radio recordings and new landscape photography. A meditation on distance, communication, and what gets lost in transmission.
+          </p>
+          <a href="#" class="btn btn--primary">Watch now <span class="arrow">→</span></a>
+        </div>
+        <div>
+          <div class="film-poster" style="background:linear-gradient(135deg,#3D1060,#250840);">
+            <div class="film-poster__placeholder">FILM STILL / POSTER</div>
+            <div class="film-poster__label">2024 · 8 min</div>
+          </div>
+        </div>
+      </article>
+
+
+      <!-- FILM 05 — In Development example -->
+      <article class="film-entry fade-in" data-year="2026">
+        <div>
+          <div class="film-entry__number">05</div>
+          <span class="label">Short Film · 2026 · In Development</span>
+          <h2 class="film-entry__title" style="margin-top:0.5rem;">The Cartographer's Daughter</h2>
+          <div class="film-entry__meta">Dir. Kyra Jolly &nbsp;·&nbsp; 2026 &nbsp;·&nbsp; In Development</div>
+          <p class="film-entry__synopsis">
+            A woman inherits her late father's archive of hand-drawn maps — none of them depicting real places. A film about invented worlds and the inner landscapes of grief.
+          </p>
+          <span class="btn btn--outline" style="opacity:0.7; cursor:default;">Coming soon</span>
+        </div>
+        <div>
+          <div class="film-poster" style="background:linear-gradient(135deg,#1A3560,#0D2048);">
+            <div class="film-poster__placeholder">FILM STILL / POSTER</div>
+            <div class="film-poster__label">2026 · Coming Soon</div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <div class="footer__logo">Kyra Jolly</div>
+          <p class="footer__tagline">Film, writing, and economic thought from a creative perspective.</p>
+          <div class="footer__social">
+            <a href="#" class="social-link">𝕏</a>
+            <a href="#" class="social-link">◎</a>
+            <a href="#" class="social-link">◈</a>
+            <a href="#" class="social-link">in</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__nav-title">Navigate</div>
+          <ul class="footer__nav-links">
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="films.html">My Films</a></li>
+            <li><a href="finance.html">Finance</a></li>
+            <li><a href="book-reviews.html">Book Reviews</a></li>
+            <li><a href="film-reviews.html">Film Reviews</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__nav-title">Connect</div>
+          <ul class="footer__nav-links">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter / X</a></li>
+            <li><a href="#">Letterboxd</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Kyra Jolly. All rights reserved.</span>
+        <span>kyrajolly.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

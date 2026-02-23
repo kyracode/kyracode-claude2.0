@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Reviews — Kyra Jolly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .controls-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .sort-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 1rem;
+      border-radius: 100px;
+      border: 1.5px solid rgba(6,13,26,0.15);
+      background: white;
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .sort-btn:hover, .sort-btn.active {
+      background: var(--navy);
+      color: white;
+      border-color: var(--navy);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">Kyra <span>Jolly</span></a>
+        <ul class="nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="films.html">Films</a></li>
+          <li><a href="finance.html">Finance</a></li>
+          <li><a href="book-reviews.html">Books</a></li>
+          <li><a href="film-reviews.html">Film Reviews</a></li>
+        </ul>
+        <button class="nav__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav__mobile">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="films.html">Films</a>
+    <a href="finance.html">Finance</a><a href="book-reviews.html">Books</a><a href="film-reviews.html">Film Reviews</a>
+  </div>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero__content">
+        <span class="label fade-in">Book Reviews</span>
+        <h1 class="display-2 fade-in fade-in-delay-1">Reading as a way of seeing.</h1>
+        <p class="fade-in fade-in-delay-2">Critical responses to fiction, non-fiction, and everything in between.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="controls-bar fade-in">
+        <div>
+          <span class="genre-pill topic-pill active" data-genre="all">All</span>
+          <span class="genre-pill topic-pill" data-genre="fiction">Fiction</span>
+          <span class="genre-pill topic-pill" data-genre="nonfiction">Non-fiction</span>
+          <span class="genre-pill topic-pill" data-genre="essays">Essays</span>
+          <span class="genre-pill topic-pill" data-genre="poetry">Poetry</span>
+        </div>
+        <div style="display:flex; gap:0.5rem;">
+          <button class="sort-btn active" data-sort="newest">Newest first ↓</button>
+          <button class="sort-btn" data-sort="oldest">Oldest first ↑</button>
+        </div>
+      </div>
+
+      <!--
+      ╔══════════════════════════════════════════════════════════════╗
+      ║  HOW TO ADD A NEW BOOK REVIEW                                ║
+      ║                                                              ║
+      ║  1. Copy one <article> block                                 ║
+      ║  2. Set data-date="YYYY-MM" e.g. data-date="2025-03"        ║
+      ║     This is the date you wrote the review — used for sort   ║
+      ║  3. Set data-genre to: fiction, nonfiction, essays, poetry  ║
+      ║  4. Edit the book title, author, stars, genre, excerpt       ║
+      ║  5. Set href to your review file:                            ║
+      ║     href="reviews/books/your-book-name.html"                 ║
+      ║  6. Create that file by copying reviews/books/piranesi.html  ║
+      ╚══════════════════════════════════════════════════════════════╝
+      -->
+      <div class="reviews-grid" id="book-grid">
+
+        <article class="review-card fade-in" data-genre="fiction" data-date="2025-01">
+          <div class="review-card__cover" style="background:linear-gradient(145deg,#1A2D5A,#2D1B69);">
+            <!--
+              ✏️ TO ADD COVER IMAGE: replace this div with
+              <img src="assets/images/books/piranesi.jpg" alt="Piranesi">
+              then add the overlay div after the img tag.
+            -->
+            <div class="review-card__cover-overlay">
+              <div class="review-card__cover-title">Piranesi</div>
+              <div class="review-card__cover-author">Susanna Clarke</div>
+            </div>
+          </div>
+          <div class="review-card__body">
+            <div class="review-card__genre">Fiction · Fantasy</div>
+            <div class="stars">★★★★★</div>
+            <p class="review-card__excerpt">Clarke builds an impossible, luminous world and populates it with a narrator of heartbreaking gentleness. A meditation on isolation, identity, and the fragility of the self.</p>
+            <a href="reviews/books/piranesi.html" class="btn btn--ghost" style="margin-top:auto;">Read review <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="review-card fade-in" data-genre="nonfiction" data-date="2024-11">
+          <div class="review-card__cover" style="background:linear-gradient(145deg,#0D3050,#1A4580);">
+            <div class="review-card__cover-overlay">
+              <div class="review-card__cover-title">The Dawn of Everything</div>
+              <div class="review-card__cover-author">Graeber &amp; Wengrow</div>
+            </div>
+          </div>
+          <div class="review-card__body">
+            <div class="review-card__genre">Non-fiction · History</div>
+            <div class="stars">★★★★★</div>
+            <p class="review-card__excerpt">A thrilling act of historiographical sabotage — dismantling the grand narratives of human progress to reveal a past full of political experimentation.</p>
+            <a href="reviews/books/dawn-of-everything.html" class="btn btn--ghost" style="margin-top:auto;">Read review <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="review-card fade-in" data-genre="fiction" data-date="2024-10">
+          <div class="review-card__cover" style="background:linear-gradient(145deg,#2D1060,#1A0840);">
+            <div class="review-card__cover-overlay">
+              <div class="review-card__cover-title">Fever Dream</div>
+              <div class="review-card__cover-author">Samanta Schweblin</div>
+            </div>
+          </div>
+          <div class="review-card__body">
+            <div class="review-card__genre">Fiction · Horror</div>
+            <div class="stars">★★★★½</div>
+            <p class="review-card__excerpt">Compressed, airless, and utterly terrifying. Schweblin writes dread the way other writers write sunsets — with an eye for the precise detail that transforms ordinary things into omens.</p>
+            <a href="reviews/books/fever-dream.html" class="btn btn--ghost" style="margin-top:auto;">Read review <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="review-card fade-in" data-genre="essays" data-date="2024-09">
+          <div class="review-card__cover" style="background:linear-gradient(145deg,#1A3560,#0D2048);">
+            <div class="review-card__cover-overlay">
+              <div class="review-card__cover-title">A Field Guide to Getting Lost</div>
+              <div class="review-card__cover-author">Rebecca Solnit</div>
+            </div>
+          </div>
+          <div class="review-card__body">
+            <div class="review-card__genre">Essays · Memoir</div>
+            <div class="stars">★★★★★</div>
+            <p class="review-card__excerpt">Solnit writes about loss and wandering with a precision that feels impossible for subject matter this amorphous. Getting lost as practice, a way of remaining alive to the world.</p>
+            <a href="reviews/books/field-guide-getting-lost.html" class="btn btn--ghost" style="margin-top:auto;">Read review <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="review-card fade-in" data-genre="nonfiction" data-date="2024-08">
+          <div class="review-card__cover" style="background:linear-gradient(145deg,#3D1060,#250840);">
+            <div class="review-card__cover-overlay">
+              <div class="review-card__cover-title">Capital in the 21st Century</div>
+              <div class="review-card__cover-author">Thomas Piketty</div>
+            </div>
+          </div>
+          <div class="review-card__body">
+            <div class="review-card__genre">Non-fiction · Economics</div>
+            <div class="stars">★★★★</div>
+            <p class="review-card__excerpt">Piketty's grand historical argument — that capital accumulates faster than economies grow — is compelling even where flawed. A book that changed how we talk about wealth.</p>
+            <a href="reviews/books/capital-21st-century.html" class="btn btn--ghost" style="margin-top:auto;">Read review <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="review-card fade-in" data-genre="poetry" data-date="2024-07">
+          <div class="review-card__cover" style="background:linear-gradient(145deg,#1A4530,#0D2820);">
+            <div class="review-card__cover-overlay">
+              <div class="review-card__cover-title">Citizen: An American Lyric</div>
+              <div class="review-card__cover-author">Claudia Rankine</div>
+            </div>
+          </div>
+          <div class="review-card__body">
+            <div class="review-card__genre">Poetry · Essay</div>
+            <div class="stars">★★★★★</div>
+            <p class="review-card__excerpt">A work that refuses genre like it refuses easy comfort. Moving between poetry, essay, and visual art to document the accumulated weight of racial microaggression in America.</p>
+            <a href="reviews/books/citizen.html" class="btn btn--ghost" style="margin-top:auto;">Read review <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <div class="footer__logo">Kyra Jolly</div>
+          <p class="footer__tagline">Film, writing, and economic thought from a creative perspective.</p>
+          <div class="footer__social">
+            <a href="#" class="social-link">𝕏</a><a href="#" class="social-link">◎</a>
+            <a href="#" class="social-link">◈</a><a href="#" class="social-link">in</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__nav-title">Navigate</div>
+          <ul class="footer__nav-links">
+            <li><a href="about.html">About Me</a></li><li><a href="films.html">My Films</a></li>
+            <li><a href="finance.html">Finance</a></li><li><a href="book-reviews.html">Book Reviews</a></li>
+            <li><a href="film-reviews.html">Film Reviews</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__nav-title">Connect</div>
+          <ul class="footer__nav-links">
+            <li><a href="#">Instagram</a></li><li><a href="#">Twitter / X</a></li>
+            <li><a href="#">Letterboxd</a></li><li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Kyra Jolly. All rights reserved.</span><span>kyrajolly.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // ── Date sort ──────────────────────────────────────────
+    const grid     = document.getElementById('book-grid');
+    const sortBtns = document.querySelectorAll('.sort-btn');
+
+    sortBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        sortBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        sortCards(grid, btn.dataset.sort);
+      });
+    });
+
+    function sortCards(container, order) {
+      const cards = Array.from(container.querySelectorAll('.review-card'));
+      cards.sort((a, b) => {
+        const da = a.dataset.date || '0000-00';
+        const db = b.dataset.date || '0000-00';
+        return order === 'newest' ? db.localeCompare(da) : da.localeCompare(db);
+      });
+      cards.forEach(c => container.appendChild(c));
+    }
+  </script>
+</body>
+</html>

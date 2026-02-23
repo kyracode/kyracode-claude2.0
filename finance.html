@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finance & Economics — Kyra Jolly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .finance-layout { display:grid; grid-template-columns:1fr 260px; gap:5rem; align-items:start; }
+    .finance-sidebar { position:sticky; top:100px; }
+    .sidebar-block { background:white; border-radius:var(--radius-md); padding:1.75rem; box-shadow:var(--shadow-sm); border:1px solid rgba(6,13,26,0.06); margin-bottom:1.5rem; }
+    .sidebar-block__title { font-size:0.68rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--muted); margin-bottom:1.1rem; }
+    .sort-btn { display:inline-flex; align-items:center; gap:0.4rem; padding:0.4rem 1rem; border-radius:100px; border:1.5px solid rgba(6,13,26,0.15); background:white; color:var(--text); font-family:var(--font-body); font-size:0.78rem; font-weight:700; letter-spacing:0.06em; cursor:pointer; transition:var(--transition); }
+    .sort-btn:hover, .sort-btn.active { background:var(--navy); color:white; border-color:var(--navy); }
+    @media (max-width:900px) { .finance-layout { grid-template-columns:1fr; } .finance-sidebar { position:static; } }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">Kyra <span>Jolly</span></a>
+        <ul class="nav__links">
+          <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+          <li><a href="films.html">Films</a></li><li><a href="finance.html">Finance</a></li>
+          <li><a href="book-reviews.html">Books</a></li><li><a href="film-reviews.html">Film Reviews</a></li>
+        </ul>
+        <button class="nav__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav__mobile">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="films.html">Films</a>
+    <a href="finance.html">Finance</a><a href="book-reviews.html">Books</a><a href="film-reviews.html">Film Reviews</a>
+  </div>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero__content">
+        <span class="label fade-in">Finance &amp; Economics</span>
+        <h1 class="display-2 fade-in fade-in-delay-1">How the world adds up.</h1>
+        <p class="fade-in fade-in-delay-2">Essays on markets, monetary systems, inequality, and economic thought — written for the curious, not the credentialled.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="finance-layout">
+
+        <main>
+          <!-- Controls -->
+          <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; margin-bottom:2.5rem;" class="fade-in">
+            <div>
+              <span class="topic-pill active" data-topic="all">All</span>
+              <span class="topic-pill" data-topic="macro">Macro</span>
+              <span class="topic-pill" data-topic="markets">Markets</span>
+              <span class="topic-pill" data-topic="inequality">Inequality</span>
+              <span class="topic-pill" data-topic="tech">Tech &amp; Economy</span>
+              <span class="topic-pill" data-topic="history">Economic History</span>
+            </div>
+            <div style="display:flex; gap:0.5rem;">
+              <button class="sort-btn active" data-sort="newest">Newest first ↓</button>
+              <button class="sort-btn" data-sort="oldest">Oldest first ↑</button>
+            </div>
+          </div>
+
+          <!--
+          ╔══════════════════════════════════════════════════════════════╗
+          ║  HOW TO ADD A NEW ESSAY                                      ║
+          ║  1. Copy one <article> block                                 ║
+          ║  2. Set data-date="YYYY-MM" — when the essay was published  ║
+          ║  3. Set data-topic: macro, markets, inequality, tech,       ║
+          ║     history                                                  ║
+          ║  4. Edit the date label, topic tag, title, excerpt           ║
+          ║  5. Set href="essays/your-essay-name.html"                   ║
+          ║  6. Create that file by copying essays/attention-economy.html║
+          ╚══════════════════════════════════════════════════════════════╝
+          -->
+          <div id="essay-list">
+
+            <article class="post-item fade-in" data-topic="tech" data-date="2025-02">
+              <div class="post-item__date">February 2025</div>
+              <span class="post-item__tag">Tech &amp; Economy</span>
+              <h2 class="post-item__title">The Attention Economy and Its Discontents</h2>
+              <p class="post-item__excerpt">We've spent two decades building platforms that monetise human attention. This essay asks whether the structural logic of that economy can ever be reformed from within.</p>
+              <a href="essays/attention-economy.html" class="btn btn--ghost">Read essay <span class="arrow">→</span></a>
+            </article>
+
+            <article class="post-item fade-in" data-topic="inequality" data-date="2025-01">
+              <div class="post-item__date">January 2025</div>
+              <span class="post-item__tag">Inequality</span>
+              <h2 class="post-item__title">Wealth Without Work: The Political Economy of Passive Income</h2>
+              <p class="post-item__excerpt">Rental income, dividends, capital gains — the forms of wealth that don't require labour are growing. What does this mean for social contracts built on the premise that reward follows effort?</p>
+              <a href="essays/wealth-without-work.html" class="btn btn--ghost">Read essay <span class="arrow">→</span></a>
+            </article>
+
+            <article class="post-item fade-in" data-topic="macro" data-date="2025-01">
+              <div class="post-item__date">January 2025</div>
+              <span class="post-item__tag">Macro</span>
+              <h2 class="post-item__title">Inflation's Other Victims: Who the CPI Misses</h2>
+              <p class="post-item__excerpt">Consumer price indices are political objects as much as economic ones. This piece asks who gets counted in the basket and who doesn't — and why it matters enormously for policy.</p>
+              <a href="essays/inflation-cpi.html" class="btn btn--ghost">Read essay <span class="arrow">→</span></a>
+            </article>
+
+            <article class="post-item fade-in" data-topic="history" data-date="2024-12">
+              <div class="post-item__date">December 2024</div>
+              <span class="post-item__tag">Economic History</span>
+              <h2 class="post-item__title">The Tulip Mania Myth and What We Get Wrong About Bubbles</h2>
+              <p class="post-item__excerpt">The Dutch tulip bubble of 1637 is economic folklore — but most of what we 'know' about it is wrong. A deep dive into historical revisionism and what it tells us about financial crises.</p>
+              <a href="essays/tulip-mania.html" class="btn btn--ghost">Read essay <span class="arrow">→</span></a>
+            </article>
+
+            <article class="post-item fade-in" data-topic="markets" data-date="2024-11">
+              <div class="post-item__date">November 2024</div>
+              <span class="post-item__tag">Markets</span>
+              <h2 class="post-item__title">Indexing Everything: The Passive Revolution in Finance</h2>
+              <p class="post-item__excerpt">Index funds have captured trillions in assets and are reshaping markets in ways their inventors never anticipated. A look at passive investing's structural effects on price discovery.</p>
+              <a href="essays/indexing-everything.html" class="btn btn--ghost">Read essay <span class="arrow">→</span></a>
+            </article>
+
+          </div>
+        </main>
+
+        <aside class="finance-sidebar">
+          <div class="sidebar-block fade-in">
+            <div class="sidebar-block__title">About this section</div>
+            <p style="font-size:0.875rem; color:var(--muted); line-height:1.7;">Finance and economics writing for curious, non-specialist readers. Long-form essays exploring systems, power, and the stories numbers tell.</p>
+          </div>
+          <div class="sidebar-block fade-in fade-in-delay-1">
+            <div class="sidebar-block__title">Topics</div>
+            <span class="topic-pill" style="cursor:default;">Macroeconomics</span>
+            <span class="topic-pill" style="cursor:default;">Markets</span>
+            <span class="topic-pill" style="cursor:default;">Inequality</span>
+            <span class="topic-pill" style="cursor:default;">Tech &amp; Economy</span>
+            <span class="topic-pill" style="cursor:default;">Economic History</span>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <div class="footer__logo">Kyra Jolly</div>
+          <p class="footer__tagline">Film, writing, and economic thought from a creative perspective.</p>
+          <div class="footer__social">
+            <a href="#" class="social-link">𝕏</a><a href="#" class="social-link">◎</a>
+            <a href="#" class="social-link">◈</a><a href="#" class="social-link">in</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__nav-title">Navigate</div>
+          <ul class="footer__nav-links">
+            <li><a href="about.html">About Me</a></li><li><a href="films.html">My Films</a></li>
+            <li><a href="finance.html">Finance</a></li><li><a href="book-reviews.html">Book Reviews</a></li>
+            <li><a href="film-reviews.html">Film Reviews</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__nav-title">Connect</div>
+          <ul class="footer__nav-links">
+            <li><a href="#">Instagram</a></li><li><a href="#">Twitter / X</a></li>
+            <li><a href="#">Letterboxd</a></li><li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Kyra Jolly. All rights reserved.</span><span>kyrajolly.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Date sort for essays
+    const essayList = document.getElementById('essay-list');
+    const sortBtns  = document.querySelectorAll('.sort-btn');
+
+    sortBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        sortBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const posts = Array.from(essayList.querySelectorAll('.post-item'));
+        posts.sort((a, b) => {
+          const da = a.dataset.date || '0000-00';
+          const db = b.dataset.date || '0000-00';
+          return btn.dataset.sort === 'newest' ? db.localeCompare(da) : da.localeCompare(db);
+        });
+        posts.forEach(p => essayList.appendChild(p));
+      });
+    });
+  </script>
+</body>
+</html>
