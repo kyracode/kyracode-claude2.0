@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--
+    ✏️ EDIT: Change the <title> to the book name
+  -->
+  <title>Piranesi — Kyra Jolly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <style>
+    .review-hero {
+      background: var(--navy);
+      padding: 9rem 0 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .review-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(26,86,219,0.18), transparent 65%),
+                  radial-gradient(ellipse at 20% 80%, rgba(124,58,237,0.1), transparent 60%);
+    }
+    .review-hero__inner {
+      position: relative; z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 5rem;
+      align-items: center;
+    }
+    .review-hero__book-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 400;
+      color: white;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+    .review-hero__author {
+      font-family: var(--font-display);
+      font-size: clamp(1.1rem, 2vw, 1.5rem);
+      font-weight: 300;
+      color: rgba(255,255,255,0.55);
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+    .review-hero__meta {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .review-hero__date {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+    }
+    .review-hero__genre {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blue-light);
+      background: rgba(59,130,246,0.15);
+      padding: 0.3rem 0.75rem;
+      border-radius: 100px;
+    }
+    .review-hero__stars {
+      color: #F59E0B;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+    }
+    /* Book cover image */
+    .book-cover {
+      width: 100%;
+      aspect-ratio: 2/3;
+      border-radius: var(--radius-md);
+      box-shadow: 0 32px 80px rgba(6,13,26,0.5);
+      overflow: hidden;
+      background: linear-gradient(145deg, #1A2D5A, #2D1B69);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.18);
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-align: center;
+      padding: 1rem;
+    }
+    .book-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Review body */
+    .review-body {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .review-body p {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: #3A3F52;
+      margin-bottom: 1.5rem;
+    }
+    .review-body h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-weight: 400;
+      margin: 2.5rem 0 1rem;
+      color: var(--navy);
+    }
+    .review-body blockquote {
+      border-left: 3px solid var(--blue);
+      padding: 0.75rem 1.75rem;
+      margin: 2rem 0;
+      background: rgba(26,86,219,0.04);
+      border-radius: 0 8px 8px 0;
+    }
+    .review-body blockquote p {
+      font-family: var(--font-display);
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      font-style: italic;
+      color: var(--navy);
+      margin: 0;
+    }
+
+    /* Back link */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue-light);
+      margin-bottom: 2rem;
+      transition: gap 0.2s ease;
+    }
+    .back-link:hover { gap: 0.75rem; }
+
+    @media (max-width: 768px) {
+      .review-hero__inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .book-cover {
+        max-width: 240px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ NAV ════════════════════════════════════════════════ -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="../../index.html" class="nav__logo">Kyra <span>Jolly</span></a>
+        <ul class="nav__links">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../about.html">About</a></li>
+          <li><a href="../../films.html">Films</a></li>
+          <li><a href="../../finance.html">Finance</a></li>
+          <li><a href="../../book-reviews.html">Books</a></li>
+          <li><a href="../../film-reviews.html">Film Reviews</a></li>
+        </ul>
+        <button class="nav__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav__mobile">
+    <a href="../../index.html">Home</a>
+    <a href="../../about.html">About</a>
+    <a href="../../films.html">Films</a>
+    <a href="../../finance.html">Finance</a>
+    <a href="../../book-reviews.html">Books</a>
+    <a href="../../film-reviews.html">Film Reviews</a>
+  </div>
+
+  <!-- ═══ HERO ════════════════════════════════════════════════ -->
+  <section class="review-hero">
+    <div class="container">
+      <div class="review-hero__inner">
+
+        <!-- Left: info -->
+        <div>
+          <a href="../../book-reviews.html" class="back-link">← All book reviews</a>
+
+          <!--
+            ✏️ EDIT: Genre label e.g. "Fiction · Fantasy" or "Non-fiction · History"
+          -->
+          <span class="label" style="color:var(--blue-light); display:block; margin-bottom:1rem;">Fiction · Fantasy</span>
+
+          <!--
+            ✏️ EDIT: Book title
+          -->
+          <h1 class="review-hero__book-title">Piranesi</h1>
+
+          <!--
+            ✏️ EDIT: Author name
+          -->
+          <p class="review-hero__author">Susanna Clarke</p>
+
+          <div class="review-hero__meta">
+            <!--
+              ✏️ EDIT: Month and year you wrote this review
+            -->
+            <span class="review-hero__date">January 2025</span>
+
+            <!--
+              ✏️ EDIT: Star rating — use ★ for filled, ½ for half, ☆ for empty
+            -->
+            <span class="review-hero__stars">★★★★★</span>
+
+            <!--
+              ✏️ EDIT: Genre tag (matches the label above)
+            -->
+            <span class="review-hero__genre">Fiction</span>
+          </div>
+        </div>
+
+        <!-- Right: book cover image -->
+        <div>
+          <div class="book-cover">
+            <!--
+              ✏️ TO ADD YOUR BOOK COVER IMAGE:
+              Delete the placeholder text below and add:
+              <img src="../../assets/images/books/piranesi.jpg" alt="Piranesi cover">
+
+              Tip: name the image after the book (lowercase, hyphens)
+              and place it in assets/images/books/
+            -->
+            BOOK COVER IMAGE
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ REVIEW BODY ══════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="review-body">
+
+        <!--
+          ✏️ EDIT: Write your full review below.
+
+          Use <p> tags for paragraphs.
+          Use <h2> tags for section headings if you want them.
+          Use <blockquote><p>...</p></blockquote> for pull quotes.
+
+          Delete the example content below and replace with your own.
+        -->
+
+        <p>
+          Susanna Clarke builds an impossible, luminous world — a house with infinite halls, tidal statues, and a sea that moves through the lower floors — and populates it with a narrator of heartbreaking gentleness. Piranesi, as he calls himself, catalogues his world with the methodical care of a scientist and the wonder of a child. He is content. He is thorough. He is, we slowly understand, wrong about almost everything.
+        </p>
+
+        <p>
+          The novel works as a mystery, a meditation, and a kind of hymn all at once. Clarke is extraordinarily precise about the mechanics of her world — the tides, the statues, the birds, the two other inhabitants — and this precision is what makes the eventual unravelling so devastating. The house is not metaphor; it is architecture. The horror, when it comes, is domestic.
+        </p>
+
+        <blockquote>
+          <p>"The Beauty of the House is immeasurable; its Kindness infinite."</p>
+        </blockquote>
+
+        <h2>What the novel is actually about</h2>
+
+        <p>
+          At its heart Piranesi is a novel about the selves we construct when our real ones become too difficult to inhabit. Without giving too much away, the book asks what we owe to the people we have been, and what happens when those people are not recoverable. It is about grief, about the violence of knowledge, about the strange mercy of forgetting.
+        </p>
+
+        <p>
+          Clarke's previous novel, Jonathan Strange & Mr Norrell, was 800 pages of meticulous Victorian pastiche. Piranesi is 272 pages and feels, in some ways, more accomplished — which is saying something. Every sentence earns its place. There is nothing here that is not necessary, and nothing necessary that is missing.
+        </p>
+
+        <h2>The verdict</h2>
+
+        <p>
+          One of the finest novels I've read in years. Quietly devastating, beautifully strange, and unlike anything else. Read it without knowing too much about it — the experience of discovery is part of the book's gift.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <div class="footer__logo">Kyra Jolly</div>
+          <p class="footer__tagline">Film, writing, and economic thought from a creative perspective.</p>
+          <div class="footer__social">
+            <a href="#" class="social-link">𝕏</a>
+            <a href="#" class="social-link">◎</a>
+            <a href="#" class="social-link">◈</a>
+            <a href="#" class="social-link">in</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__nav-title">Navigate</div>
+          <ul class="footer__nav-links">
+            <li><a href="../../about.html">About Me</a></li>
+            <li><a href="../../films.html">My Films</a></li>
+            <li><a href="../../finance.html">Finance</a></li>
+            <li><a href="../../book-reviews.html">Book Reviews</a></li>
+            <li><a href="../../film-reviews.html">Film Reviews</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__nav-title">Connect</div>
+          <ul class="footer__nav-links">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter / X</a></li>
+            <li><a href="#">Letterboxd</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Kyra Jolly. All rights reserved.</span>
+        <span>kyrajolly.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
