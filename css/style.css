@@ -382,6 +382,37 @@ h1, h2, h3, h4 {
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
+
+/* PORTRAIT poster (9:16) */
+.film-poster-vertical {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  background: var(--grad-dark);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+.film-poster::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(6,13,26,0.6) 0%, transparent 55%);
+  pointer-events: none;
+}
+.film-poster img { width: 100%; height: 100%; object-fit: cover; }
+.film-poster__label {
+  position: absolute;
+  bottom: 1rem; left: 1rem;
+  z-index: 1;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 /* Placeholder text inside poster when no image */
 .film-poster__placeholder {
   position: absolute;
