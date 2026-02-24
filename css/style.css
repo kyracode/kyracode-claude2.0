@@ -386,7 +386,7 @@ h1, h2, h3, h4 {
 /* PORTRAIT poster (9:16) */
 .film-poster-vertical {
   width: 100%;
-  aspect-ratio: 2 / 3;
+  aspect-ratio: 1 / 1.414;
   background: var(--grad-dark);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-lg);
