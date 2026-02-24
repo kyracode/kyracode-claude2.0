@@ -349,8 +349,8 @@ h1, h2, h3, h4 {
 .film-entry__synopsis {
   color: var(--navy-mid);
   font-size: 1rem;
-  line-height: 1.75;
-  margin-bottom: 2rem;
+  line-height: 1.65;
+  margin-bottom: 1.75rem;
 }
 
 /* LANDSCAPE poster (16:9) */
