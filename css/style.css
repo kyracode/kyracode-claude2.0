@@ -496,6 +496,7 @@ h1, h2, h3, h4 {
   font-size: clamp(1.625rem, 2.5vw, 2rem);
   margin-bottom: 0.6rem;
   transition: color var(--transition);
+   font-weight: 600;
 }
 .post-item:hover .post-item__title { color: var(--blue); }
 .post-item__excerpt { color: var(--navy-mid); font-size: 1.25rem; line-height: 1.7; margin-bottom: 1rem; }
