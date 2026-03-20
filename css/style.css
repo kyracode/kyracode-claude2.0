@@ -482,8 +482,8 @@ h1, h2, h3, h4 {
 
 /* Post list items */
 .post-item {
-  padding: 2.25rem 0;
-  border-bottom: 1px solid rgba(6,13,26,0.08);
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(6,13,26,0.1);
 }
 .post-item:last-child { border-bottom: none; }
 .post-item__date {
