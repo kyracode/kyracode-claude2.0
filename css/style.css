@@ -671,8 +671,8 @@ h1, h2, h3, h4 {
   border-left: 3px solid var(--blue);
   margin-bottom: 0.875rem;
 }
-.skill-card__name { font-weight: 700; font-size: 0.875rem; margin-bottom: 0.25rem; }
-.skill-card__desc { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+.skill-card__name { font-weight: 700; font-size: 0.95rem; margin-bottom: 0.25rem; }
+.skill-card__desc { font-size: 0.9rem; color: var(--blue); line-height: 1.5; }
 
 .gallery-grid {
   display: grid;
