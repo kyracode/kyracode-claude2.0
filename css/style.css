@@ -498,7 +498,7 @@ h1, h2, h3, h4 {
   transition: color var(--transition);
 }
 .post-item:hover .post-item__title { color: var(--blue); }
-.post-item__excerpt { color: var(--muted); font-size: 1.25rem; line-height: 1.7; margin-bottom: 1rem; }
+.post-item__excerpt { color: var(--navy-mid); font-size: 1.25rem; line-height: 1.7; margin-bottom: 1rem; }
 .post-item__tag {
   display: inline-block;
   padding: 0.25rem 0.75rem;
