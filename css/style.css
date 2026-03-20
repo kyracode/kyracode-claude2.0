@@ -196,7 +196,7 @@ h1, h2, h3, h4 {
 /* â”€â”€â”€ Page Hero (inner pages) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .page-hero {
   background: var(--navy);
-  padding: 11rem 0 5rem;
+  padding: 5rem 0 3rem;
   position: relative;
   overflow: hidden;
 }
