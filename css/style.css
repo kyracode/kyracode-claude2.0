@@ -277,8 +277,8 @@ h1, h2, h3, h4 {
 }
 .explore-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
 .explore-card__icon { font-size: 1.5rem; margin-bottom: 0.25rem; }
-.explore-card__title { font-family: var(--font-display); font-size: 1.3rem; }
-.explore-card__desc  { color: var(--muted); font-size: 0.95rem; line-height: 1.6; flex: 1; }
+.explore-card__title { font-family: var(--font-display); font-size: 1.5rem; }
+.explore-card__desc  { color: var(--muted); font-size: 1.05rem; line-height: 1.6; flex: 1; }
 
 /* â”€â”€â”€ FILMS PAGE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .timeline-hero {
