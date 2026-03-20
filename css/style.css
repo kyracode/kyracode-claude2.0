@@ -348,7 +348,7 @@ h1, h2, h3, h4 {
 }
 .film-entry__synopsis {
   color: var(--navy-mid);
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   line-height: 1.65;
   margin-bottom: 1.75rem;
 }
