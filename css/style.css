@@ -513,10 +513,10 @@ h1, h2, h3, h4 {
 .topic-pill {
   display: inline-block;
   padding: 0.32rem 0.875rem;
-  border-radius: 100px;
+  border-radius: 125px;
   background: rgba(26,86,219,0.08);
   color: var(--blue);
-  font-size: 0.75rem; font-weight: 700;
+  font-size: 1rem; font-weight: 700;
   letter-spacing: 0.06em;
   margin-right: 0.4rem; margin-bottom: 0.4rem;
   transition: var(--transition); cursor: pointer;
