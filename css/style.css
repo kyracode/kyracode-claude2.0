@@ -493,12 +493,12 @@ h1, h2, h3, h4 {
 }
 .post-item__title {
   font-family: var(--font-display);
-  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
   margin-bottom: 0.6rem;
   transition: color var(--transition);
 }
 .post-item:hover .post-item__title { color: var(--blue); }
-.post-item__excerpt { color: var(--muted); font-size: 0.925rem; line-height: 1.7; margin-bottom: 1rem; }
+.post-item__excerpt { color: var(--muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem; }
 .post-item__tag {
   display: inline-block;
   padding: 0.25rem 0.75rem;
