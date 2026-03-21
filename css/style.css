@@ -570,7 +570,7 @@ h1, h2, h3, h4 {
 }
 .review-card__genre { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue); }
 .stars { color: #F59E0B; font-size: 0.9rem; letter-spacing: 0.08em; }
-.review-card__excerpt { font-size: 0.875rem; color: var(--muted); line-height: 1.65; flex: 1; }
+.review-card__excerpt { font-size: 0.95rem; color: var(--muted); line-height: 1.65; flex: 1; }
 
 /* Film review card */
 .film-review-card {
@@ -611,9 +611,9 @@ h1, h2, h3, h4 {
   padding: 1.4rem;
   flex: 1; display: flex; flex-direction: column; gap: 0.5rem;
 }
-.film-review-card__director { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); }
-.film-review-card__title { font-family: var(--font-display); font-size: 1.2rem; }
-.film-review-card__excerpt { font-size: 0.875rem; color: var(--muted); line-height: 1.65; flex: 1; }
+.film-review-card__director { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); }
+.film-review-card__title { font-family: var(--font-display); font-size: 1.4rem; }
+.film-review-card__excerpt { font-size: 0.95rem; color: var(--muted); line-height: 1.65; flex: 1; }
 
 /* Hero review (film reviews page) */
 .hero-review {
