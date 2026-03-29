@@ -12,9 +12,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/style.css" />
   <style>
-    .nav__mobile {
-      display: none !important;
-    }
     
     .essay-hero {
       background: var(--navy);
@@ -28,6 +25,11 @@
       background: radial-gradient(ellipse at 65% 40%, rgba(26,86,219,0.2), transparent 60%),
                   radial-gradient(ellipse at 25% 75%, rgba(124,58,237,0.1), transparent 55%);
     }
+
+    .essay-hero::before {
+      pointer-events: none;
+    }
+    
     .essay-hero__inner {
       position: relative; z-index: 1;
       max-width: 800px;
