@@ -129,7 +129,7 @@ h1, h2, h3, h4 {
   color: white;
 }
 .nav__logo span { color: var(--blue-light); }
-.nav__links { display: flex; align-items: center; gap: 2.25rem; list-style: none; }
+.nav__links { display: flex; align-items: center; gap: 1rem; list-style: none; }
 .nav__links a {
   font-size: 0.78rem;
   font-weight: 600;
