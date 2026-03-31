@@ -97,6 +97,23 @@ h1, h2, h3, h4 {
   transition: var(--transition);
   text-decoration: none;
 }
+
+.btn2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.6rem;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
 .btn--primary { background: var(--navy); color: white; }
 .btn--primary:hover { background: var(--navy-mid); transform: translateY(-2px); box-shadow: var(--shadow-md); }
 .btn--outline { background: transparent; color: var(--navy); border: 1.5px solid var(--navy); }
@@ -348,7 +365,7 @@ h1, h2, h3, h4 {
 }
 .film-entry__synopsis {
   color: var(--navy-mid);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.65;
   margin-bottom: 1.75rem;
 }
